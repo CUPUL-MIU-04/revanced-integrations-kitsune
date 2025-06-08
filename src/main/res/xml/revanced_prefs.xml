@@ -1,0 +1,22 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="Volume Settings">
+        
+        <SwitchPreference
+            android:key="revanced_stable_volume_enabled"
+            android:title="Stable Volume"
+            android:summary="Lock volume at fixed level"
+            android:defaultValue="false" />
+            
+        <ListPreference
+            android:key="revanced_stable_volume_level"
+            android:title="Volume Level"
+            android:summary="Set fixed volume level"
+            android:entries="@array/volume_levels"
+            android:entryValues="@array/volume_level_values"
+            android:defaultValue="7"
+            android:dependency="revanced_stable_volume_enabled" />
+            
+    </PreferenceCategory>
+
+</PreferenceScreen>
